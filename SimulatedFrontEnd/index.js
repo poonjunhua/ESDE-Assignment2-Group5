@@ -3,8 +3,8 @@ const express=require('express');
 const serveStatic=require('serve-static');
 
 
-var hostname="localhost";
-var port=8081;
+// var hostname="localhost";
+// var port=8081;
 
 
 var app=express();
@@ -33,11 +33,11 @@ app.get("/", (req, res) => {
     res.sendFile("/public/home.html", { root: __dirname });
 });
 
-app.listen(port,hostname,function(){
+// app.listen(port,hostname,function(){
 
-    console.log(`Server hosted at http://${hostname}:${port}`);
-});
-
-// var server = app.listen(8081, function () {
-//     var port = server.address().port;
+//     console.log(`Server hosted at http://${hostname}:${port}`);
 // });
+
+var server = app.listen(8081, function () {
+    var port = server.address().port;
+});
